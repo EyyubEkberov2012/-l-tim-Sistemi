@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 12 Concept | Web Jeet</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/color/27/null/windows-11.png"
+      type="image/x-icon"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+    <meta name="title" content="Windows 12 Concept | Web Jeet" />
+    <meta
+      name="description"
+      content="Windows 12 Concept is a project to show the upcoming operating system of Microsoft (i.e Windows 12)."
+    />
+  </head>
+  <body>
+
+    <div id="overlay">
+      <img src="https://img.icons8.com/nolan/150/windows-11.png"/>
+      <div style="display: flex; align-items: center;justify-content: center;">
+        <img src="./images/loader.gif" alt="loader" width="80px">
+      </div>
+      </div>
+      
+
+    <div id="desktop">
+        <div class="video-container">
+          <video autoplay muted loop id="mainwallpaper">
+          <source src="" type="video/mp4"  />
+      </video>
+  </div>
+      <div id="taskbar" class="taskbar">
+        <img
+          src="https://img.icons8.com/color/27/null/windows-11.png"
+          onclick="startmenutoggle()"
+        />
+        <img src="https://img.icons8.com/windows/27/null/search--v1.png" />
+        <img
+          src="https://img.icons8.com/fluency/27/null/ms-edge-new.png"
+          onclick="edgetoggle()"
+        />
+        <img
+          src="https://img.icons8.com/fluency/27/null/windows-explorer.png"
+          onclick="explorertoggle()"
+        />
+        <img
+          src="https://img.icons8.com/color/27/null/adobe-photoshop--v1.png"
+          onclick="photoshoptoggle()"
+        />
+        <img
+          src="https://play-lh.googleusercontent.com/bquiDSLaQ57YLHLbZ-3-1bFo1X7MWGTjspf-mWk4j4Ip1gfkyQ8wTAETszEflT2ODds"
+          width="27px"
+          onclick="ylighttoggle()"
+        />
+        <div class="rtaskbar">
+          <img onclick="winatglancetoggle()"
+            class="rtaskicon"
+            src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/17/null/external-arrows-arrows-those-icons-lineal-color-those-icons-15.png"
+          />
+          <div class="wifibat" style="display: flex;
+          align-items: center;
+          justify-content: center;" onclick="quicksettingstoggle()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wifi"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            <div id="status" >
+              <svg
+                id="charge"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 318.29 176.83"
+              >
+                <rect
+                  id="charge-status"
+                  x="17"
+                  y="17"
+                  data-full=""
+                  width="0"
+                  height="142"
+                  fill=""
+                >
+                  <animate
+                    id="charge-status-ani"
+                    attributeName="width"
+                    from="0"
+                    to=""
+                    dur="2s"
+                    repeatCount="1"
+                  />
+                </rect>
+                <g id="battery-path">
+                  <path
+                    d="M443.2,310.95a17.69,17.69,0,0,1,17.68,17.68v53a17.69,17.69,0,0,1-17.68,17.68v22.1a22.17,22.17,0,0,1-22.1,22.1H164.69a22.17,22.17,0,0,1-22.1-22.1V288.85a22.17,22.17,0,0,1,22.1-22.1h256.4a22.17,22.17,0,0,1,22.1,22.1v22.1Zm-2.7,70.73v-53h-15V288.85a4.26,4.26,0,0,0-4.42-4.42H164.69a4.26,4.26,0,0,0-4.42,4.42V421.47a4.26,4.26,0,0,0,4.42,4.42h256.4a4.26,4.26,0,0,0,4.42-4.42V381.68h15Z"
+                    transform="translate(-142.59 -266.74)"
+                    fill="#231f20"
+                  />
+                </g>
+                <polygon
+                  class="hidden"
+                  id="charge-path"
+                  points="129.64 37.69 189.71 37.69 165.26 80.27 191.19 80.27 127.74 146.66 136.81 96.07 111.94 96.5 129.64 37.69"
+                  fill="#f1c40f"
+                >
+                  <animate
+                    attributeName="fill"
+                    from="#f1c40f"
+                    to="#fcd536"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </polygon>
+              </svg>
+            </div>
+          </div>
+          
+          
+         
+          <p
+            id="MyClockDisplay"
+            class="rtaskiconp clock"
+            onload="showTime()"
+          ></p>
+          <p class="rtaskiconp" onclick="calendertoggle()">
+            <span id="current_day"></span>
+            <span id="current_month"></span>
+            <span id="current_year"></span>
+          </p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sideapps" onclick="settingstoggle()">
+          <img
+            src="https://img.icons8.com/stickers/30/null/my-computer.png"
+          />
+          <br />
+          This Pc
+        </div>
+        <div class="sideapps" onclick="revillagetoggle()">
+          <img
+            src="./images/revillage.png"
+            width="30px"
+          />
+          <br />
+          Resident Evil Village
+        </div>
+        <a href="https://buymeacoffee.com/webjeet" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <div class="sideapps">
+          <img
+            src="https://play-lh.googleusercontent.com/aMb_Qiolzkq8OxtQZ3Af2j8Zsp-ZZcNetR9O4xSjxH94gMA5c5gpRVbpg-3f_0L7vlo"
+            width="30px"
+          />
+          <br />
+          Buy Me a Coffee
+        </div>
+      </a>
+        <a href="https://github.com/web-jit" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <div class="sideapps">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+            width="30px"
+          />
+          <br />
+          Github
+        </div>
+      </a>
+        <div class="sideapps" onclick="storetoggle()">
+          <img src="https://img.icons8.com/fluency/30/null/microsoft-store.png"/>
+          <br />
+          Store
+        </div>
+        <div class="sideapps" onclick="livewallpapertoggle()">
+          <img src="https://img.icons8.com/color/30/null/lively-wallpaper.png"/>
+          <br />
+          Lively Wallpaper
+        </div>
+      </div>
+      <div id="startmenu">
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Search apps, files, settings & more."
+          />
+        </div>
+        <div class="dashboard">
+          <div class="updashboard">
+            <h3>Dashboard</h3>
+            <button>
+              Dashboard &nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="downdashboard">
+            <div class="ldashboard">
+              <div class="wheather">
+                <div class="upwheather">
+                  <div>
+                    Weather
+                    <img
+                      src="https://img.icons8.com/emoji/20/null/sun-behind-small-cloud.png"
+                    />
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                  </svg>
+                </div>
+                <div class="wheatherarea">
+                  <p>USA</p>
+                  <p>Cloudy</p>
+                </div>
+                <div class="wheathertemp">20°C</div>
+              </div>
+              <div class="stickynote">
+                <div class="upwheather">
+                  <div>Sticky Notes</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                  </svg>
+                </div>
+                <div class="notes">
+                  <div class="noteshead">Build PC</div>
+                  <div class="note"><input type="radio" />Buy Processor</div>
+                  <div class="note"><input type="radio" />Buy Motherboard</div>
+                  <div class="note"><input type="radio" />Buy AIU</div>
+                </div>
+                <div class="newnotes">New Sticky Notes</div>
+              </div>
+            </div>
+            <div class="rdashboard">
+              <div class="eventscalender">
+                <div class="upwheather">
+                  <div>Upcoming Events</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                  </svg>
+                </div>
+                <div class="dateday">
+                  <div class="dates">
+                    <p>S</p>
+                    <p>1</p>
+                  </div>
+                  <div class="dates">
+                    <p>M</p>
+                    <p style="background-color: lightgreen">2</p>
+                  </div>
+                  <div class="dates">
+                    <p>T</p>
+                    <p style="background-color: skyblue">3</p>
+                  </div>
+                  <div class="dates">
+                    <p>W</p>
+                    <p>4</p>
+                  </div>
+                  <div class="dates">
+                    <p>T</p>
+                    <p>5</p>
+                  </div>
+                  <div class="dates">
+                    <p>F</p>
+                    <p>6</p>
+                  </div>
+                  <div class="dates">
+                    <p>S</p>
+                    <p>7</p>
+                  </div>
+                </div>
+                <div class="listevents">
+                  <div class="events">
+                    <div></div>
+                    Father's Day <br />All day
+                  </div>
+                  <div class="events">
+                    <div style="border-left: 2px solid skyblue;"></div>
+                    Mother's Day <br />All day
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="updashboard">
+            <h3>Apps</h3>
+            <button>
+              Apps &nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="appspinned">
+            <div class="pinned">Pinned</div>
+            <div class="pinnedapps">
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/fluency/25/null/microsoft-word-2019.png"
+                  />
+                </div>
+                Word
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/fluency/25/null/microsoft-excel-2019.png"
+                  />
+                </div>
+                Excel
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/fluency/25/null/microsoft-outlook-2019.png"
+                  />
+                </div>
+                Outlook
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/color/25/null/microsoft-to-do-app.png"
+                  />
+                </div>
+                To Do
+              </div>
+            </div>
+          </div>
+          <div class="appspinned" style="margin-top: 1.5rem">
+            <div class="pinned">A</div>
+            <div class="pinnedapps" style="gap: 36px">
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/color/25/null/adobe-photoshop--v1.png"
+                  />
+                </div>
+                Photoshop
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/color/25/1A1A1A/adobe-illustrator--v1.png"
+                  />
+                </div>
+                Illustrator
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/color/25/null/adobe-after-effects--v1.png"
+                  />
+                </div>
+                Effects
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/color/25/null/adobe-xd--v1.png"
+                  />
+                </div>
+                Xd
+              </div>
+            </div>
+          </div>
+          <div class="appspinned" style="margin-top: 1.5rem">
+            <div class="pinned">C</div>
+            <div class="pinnedapps">
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/fluency/25/null/calendar.png"
+                  />
+                </div>
+                Calender
+              </div>
+              <div class="pinnedapp">
+                <div>
+                  <img
+                    src="https://img.icons8.com/fluency/25/null/alarm-clock--v1.png"
+                  />
+                </div>
+                Clock
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="userinfo">
+          <div class="user">
+            <img src="./images/Logo.png" width="33px" /> Web Jeet
+          </div>
+          <div class="userbtn">
+            <div class="ubtn">
+              <div>
+                <img
+                  src="https://img.icons8.com/fluency-systems-regular/20/null/shutdown.png"
+                />
+              </div>
+              Power
+            </div>
+            <div class="ubtn">
+              <div>
+                <img
+                  src="https://img.icons8.com/ios/20/null/windows-explorer.png"
+                />
+              </div>
+              Files
+            </div>
+            <div class="ubtn">
+              <div>
+                <img
+                  src="https://img.icons8.com/windows/20/null/settings--v1.png"
+                />
+              </div>
+              Settings
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="edge">
+        <div class="actionbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg onclick="edgemaximizetoggle()" id="edgemini" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-miniimize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+          <svg onclick="edgeminimizetoggle()" id="edgemaxi" style="display:block;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+          <svg onclick="edgetoggle()" id="edgeclose" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x "><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <iframe src="https://bing.com" frameborder="0"></iframe>
+      </div>
+      <div id="photoshop">
+        <div class="actionbar" style="background-color: #474747 !important; ">
+          <svg style="color:white;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg onclick="photoshopmaximizetoggle()" id="photoshopmini" style="color:white; display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-miniimize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+          <svg onclick="photoshopminimizetoggle()" id="photoshopmaxi" style="color:white; display:block;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+          <svg onclick="photoshoptoggle()" id="photoshopclose" style="color:white;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <iframe src="https://photopea.com/" frameborder="0"></iframe>
+      </div>
+      <div id="ylight">
+        <div class="actionbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg onclick="ylightmaximizetoggle()" id="ylightmini" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-miniimize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+          <svg onclick="ylightminimizetoggle()" id="ylightmaxi" style="display:block;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+          <svg onclick="ylighttoggle()" id="ylightclose" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <iframe src="https://ylight.xyz" frameborder="0"></iframe>
+      </div>
+      <div id="revillage">
+        <iframe id="revillageframe" src="" frameborder="0" style="height:100vh ;"></iframe>
+        <div class="quit" onclick="revillagetoggle()"><h3>Quit</h3></div>
+      </div>
+      <div id="settings">
+        <div class="actionbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+          <svg onclick="settingstoggle()" id="settingsclose" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <div class="soon">Coming Soon...</div>
+      </div>
+      <!-- <div id="explorer">
+        <div class="explorerupbar">
+          <div class="leftexplorerupbar">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Add Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 176v160M336 256H176"/></svg> New</span>
+            <p>|</p>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Create</title><path d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M459.94 53.25a16.06 16.06 0 00-23.22-.56L424.35 65a8 8 0 000 11.31l11.34 11.32a8 8 0 0011.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38zM399.34 90L218.82 270.2a9 9 0 00-2.31 3.93L208.16 299a3.91 3.91 0 004.86 4.86l24.85-8.35a9 9 0 003.93-2.31L422 112.66a9 9 0 000-12.66l-9.95-10a9 9 0 00-12.71 0z"/></svg></span>
+            <p>|</p>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Grid</title><rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></span>
+            <p>|</p>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Share</title><path d="M336 192h40a40 40 0 0140 40v192a40 40 0 01-40 40H136a40 40 0 01-40-40V232a40 40 0 0140-40h40M336 128l-80-80-80 80M256 321V48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></span>
+          </div>
+          
+          <div class="midexplorerupbar">
+            <input type="text" placeholder="Enter path or location">
+          </div>
+
+          <div class="actionbar" style="width:min-content ;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              style="fill: rgba(0, 0, 0, 1)"
+              onclick="explorerclosetoggle()"
+            >
+              <path d="M5 11h14v2H5z"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              style="fill: rgba(0, 0, 0, 1)"
+              onclick="explorerminimizetoggle()"
+            >
+              <path
+                d="M16 7H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM4 19v-8h12V9l.002 10H4z"
+              ></path>
+              <path
+                d="M22 5c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2h13.001c1.101 0 1.996.895 1.999 1.994L20.002 15H20v2c1.103 0 2-.897 2-2V8.007L22.001 8V6L22 5.99V5z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              onclick="explorertoggle()"
+              width="24"
+              height="24"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <title>Close</title>
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+                d="M368 368L144 144M368 144L144 368"
+              />
+            </svg>
+          </div>
+
+        </div>
+        
+        <div class="explorerdownside">
+          
+          <div class="explorersidebar">
+            <ul>
+              <li onclick="shohidefolderlist()"><svg id="rightsidelisticons" style="display: none"  xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg> <svg id="downsidelisticons" xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg><img src="https://img.icons8.com/fluency/42/null/star.png"/> Quick Access</li>
+              <li id="folderslist1"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/desktop.png"/> Desktop</li>
+              <li id="folderslist2"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/downloads-folder--v2.png"/> Downloads</li>
+              <li id="folderslist3"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/documents-folder--v2.png"/> Documents</li>
+              <li id="folderslist4"><p style="background-color:blue;"></p><img src="https://img.icons8.com/fluency/42/null/pictures-folder--v1.png"/> Pictures</li>
+              <li id="folderslist5"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/movies-folder--v2.png"/> Videos</li>
+              <li id="folderslist6"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/photos-folder--v2.png"/> Music</li>
+              <li id="folderslist7"><p style="background-color:transparent;"></p><img src="https://img.icons8.com/fluency/42/null/cloud-folder--v2.png"/> OneDrive</li>
+            </ul>
+          </div>
+          <div id="explorermaincontent" class="explorermaincontent">
+            <div class="explorersortby">Sort By: &nbsp; <svg xmlns="http://www.w3.org/2000/svg" class="explorerionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg> <strong>&nbsp;Most Recent</strong></div>
+            <div class="explorercontent">
+              <div class="imgcontent">
+                <img src="./images/foods.jpg" alt="Foods"> <p>Foods.jpg</p>
+              </div>
+              <div class="imgcontent">
+                <img src="./images/journey.jpg" alt="Journey"> <p>Journey.jpg</p>
+              </div>
+              <div class="imgcontent">
+                <img src="./images/surface-laptop.jpg" alt="Surface Laptop"> <p>Surface Laptop.jpg</p>
+              </div>
+              <div class="imgcontent">
+                <img src="./images/room.jpg" alt="Room"> <p>Rooms.jpg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Lively Wallpaper -->
+      
+      <div id="livewallpaper">
+        <div class="actionbar">
+          <svg xmlns="http://www.w3.org/2000/svg" style="color:white;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg onclick="livewallpapertoggle()" style="color: rgb(255, 255, 255); border-top-right-radius: 14px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <div class="wallcontent">
+          <h3>Lively Wallpaper</h3>
+          <div style="background-image: url(./images/paper-1.png);" onmouseover="showbtn1()" onmouseout="hidebtn1()" class="wallpapers"><button class="setwall" id="wallbtn1" onclick="wallpaper1()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-2.png);" onmouseover="showbtn2()" onmouseout="hidebtn2()" class="wallpapers"><button class="setwall" id="wallbtn2" onclick="wallpaper2()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-3.png);" onmouseover="showbtn3()" onmouseout="hidebtn3()" class="wallpapers"><button class="setwall" id="wallbtn3" onclick="wallpaper3()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-4.png);" onmouseover="showbtn4()" onmouseout="hidebtn4()" class="wallpapers"><button class="setwall" id="wallbtn4" onclick="wallpaper4()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-5.png);" onmouseover="showbtn5()" onmouseout="hidebtn5()" class="wallpapers"><button class="setwall" id="wallbtn5" onclick="wallpaper5()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-6.png);" onmouseover="showbtn6()" onmouseout="hidebtn6()" class="wallpapers"><button class="setwall" id="wallbtn6" onclick="wallpaper6()">Set as Wallpaper</button></div>
+          <div style="background-image: url(./images/paper-7.png);" onmouseover="showbtn7()" onmouseout="hidebtn7()" class="wallpapers"><button class="setwall" id="wallbtn7" onclick="wallpaper7()">Set as Wallpaper</button></div>
+        </div>
+      </div>
+
+      
+      <!-- Right Click -->
+      <div id="context-menu">
+        <div class="rclickopt">View <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg></div>
+        <div class="rclickopt">Group <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg></div>
+        <div class="rclickopt">Refresh</div>
+        <div class="rclickopt">New <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg></div>
+        <div class="rclickopt">Display Settings</div>
+        <div class="rclickopt">Personalize</div>
+      </div>
+      <!-- Quick Settings  -->
+
+    <div id="quicksettings">
+      <div class="quicksettingsheader">
+        <h4>Quick Settings</h4>
+      </div>
+      <hr>
+      <div class="middletoolbar">
+        <div class="leftmiddletoolbar">
+          <div class="pcstatus">    
+            <div class="container">
+              <div class="circular-progress">
+                  <span class="progress-value">0%</span>
+              </div>
+          </div>
+          <h3>Surface Pro 9</h3>
+          <h4>Available for around 8 hours</h4>
+        </div>
+        <div class="brightnesscontrol">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon1" viewBox="0 0 512 512"><title>Sunny</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/></svg>
+          <input type="range"  id="brightness" value="50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon1" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+        </div>
+        <div class="volumecontrol">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon1" viewBox="0 0 512 512"><title>Volume High</title><path d="M126 192H56a8 8 0 00-8 8v112a8 8 0 008 8h69.65a15.93 15.93 0 0110.14 3.54l91.47 74.89A8 8 0 00240 392V120a8 8 0 00-12.74-6.43l-91.47 74.89A15 15 0 01126 192zM320 320c9.74-19.38 16-40.84 16-64 0-23.48-6-44.42-16-64M368 368c19.48-33.92 32-64.06 32-112s-12-77.74-32-112M416 416c30-46 48-91.43 48-160s-18-113-48-160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+          <input type="range"  id="volume" value="50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon1" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+        </div>
+        <div class="controlcenter">
+          <div id="cbtn1" class="controlbtn-on" onclick="controlbtntoggle()" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wifi-ii ionicon2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            <div class="midbor"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+          </div>
+          <div id="cbtn2" class="controlbtn-off" onclick="controlbtn2toggle()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Bluetooth</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M144 352l224-192L256 48v416l112-112-224-192"/></svg>
+            <div class="midbor"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+          </div>
+          <div id="cbtn3" class="controlbtn-off" onclick="controlbtn3toggle()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Airplane</title><path d="M407.72 224c-3.4 0-14.79.1-18 .3l-64.9 1.7a1.83 1.83 0 01-1.69-.9L193.55 67.56a9 9 0 00-6.66-3.56H160l73 161a2.35 2.35 0 01-2.26 3.35l-121.69 1.8a8.06 8.06 0 01-6.6-3.1l-37-45c-3-3.9-8.62-6-13.51-6H33.08c-1.29 0-1.1 1.21-.75 2.43l19.84 71.42a16.3 16.3 0 010 11.9L32.31 333c-.59 1.95-.52 3 1.77 3H52c8.14 0 9.25-1.06 13.41-6.3l37.7-45.7a8.19 8.19 0 016.6-3.1l120.68 2.7a2.7 2.7 0 012.43 3.74L160 448h26.64a9 9 0 006.65-3.55L323.14 287c.39-.6 2-.9 2.69-.9l63.9 1.7c3.3.2 14.59.3 18 .3C452 288.1 480 275.93 480 256s-27.88-32-72.28-32z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+            <div class="midbor"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+          </div>
+        </div></div>
+        <div class="rightmiddletoolbar">
+          <div class="currentmusic">
+            <div class="umdp">
+              <div class="mdp"></div>
+            </div>
+            <div class="mname">
+              <h4>You are Mine</h4>
+              <h5>Phantogram</h5>
+            </div>
+            <div class="mcontrol">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Play Skip Back</title><path d="M400 111v290c0 17.44-17 28.52-31 20.16L121.09 272.79c-12.12-7.25-12.12-26.33 0-33.58L369 90.84c14-8.36 31 2.72 31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M112 80v352"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon5" viewBox="0 0 512 512"><title>Play</title><path d="M112 111v290c0 17.44 17 28.52 31 20.16l247.9-148.37c12.12-7.25 12.12-26.33 0-33.58L143 90.84c-14-8.36-31 2.72-31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Play Skip Forward</title><path d="M112 111v290c0 17.44 17 28.52 31 20.16l247.9-148.37c12.12-7.25 12.12-26.33 0-33.58L143 90.84c-14-8.36-31 2.72-31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M400 80v352"/></svg>
+            </div>
+          </div>
+          <div class="connectionmanager">
+            <h4>Connection Manager</h4>
+            <div class="connection">
+                  <div id="wifi-connected" class="connected">
+                   <h5 id="wifissid">Xstream Fiber</h5> 
+                   <p id="wifistatus">Connected</p> 
+                  </div>
+                  <div class="connectedicon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Wifi</title><path d="M332.41 310.59a115 115 0 00-152.8 0M393.46 249.54a201.26 201.26 0 00-274.92 0M447.72 182.11a288 288 0 00-383.44 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 416a32 32 0 1132-32 32 32 0 01-32 32z"/></svg>
+                  
+                  </div>
+            </div>
+            <div class="connection">
+                  <div class="connected">
+                   <h5>Bluetooth</h5>    
+                   <p id="bluestatus">Turned Off</p> 
+                  </div>
+                  <div class="connectedicon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Bluetooth</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M144 352l224-192L256 48v416l112-112-224-192"/></svg>
+                  
+                  </div>
+            </div>
+            <div class="connection">
+                  <div class="connected">
+                   <h5>VPN</h5>
+                    Not Configured
+                  </div>
+                  <div class="connectedicon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon2" viewBox="0 0 512 512"><title>Shield</title><path d="M463.1 112.37C373.68 96.33 336.71 84.45 256 48c-80.71 36.45-117.68 48.33-207.1 64.37C32.7 369.13 240.58 457.79 256 464c15.42-6.21 223.3-94.87 207.1-351.63z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                  
+                  </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+   
+
+    <!--  -->
+    <div id="winatglance">
+      <div class="quicksettingsheader">
+        <h4>Windows at a glance</h4>
+      </div>
+      <hr>
+      <div class="servicesrunning"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 64 64" style=" fill:#000000;"><path d="M 13 6 C 9.1482075 6 6 9.1482075 6 13 L 6 51 C 6 54.851793 9.1482075 58 13 58 L 51 58 C 54.851793 58 58 54.851793 58 51 L 58 13 C 58 9.1482075 54.851793 6 51 6 L 13 6 z M 13 8 L 51 8 C 53.768207 8 56 10.231793 56 13 L 56 51 C 56 53.768207 53.768207 56 51 56 L 13 56 C 10.231793 56 8 53.768207 8 51 L 8 13 C 8 10.231793 10.231793 8 13 8 z M 39.738281 10.085938 C 39.609953 10.065953 39.475547 10.070266 39.341797 10.103516 C 38.805797 10.237516 38.479281 10.781406 38.613281 11.316406 L 39.099609 13.255859 C 39.213609 13.710859 39.620359 14.013672 40.068359 14.013672 C 40.148359 14.013672 40.2305 14.004375 40.3125 13.984375 C 40.8485 13.850375 41.173063 13.306484 41.039062 12.771484 L 40.554688 10.832031 C 40.454188 10.428531 40.123266 10.145891 39.738281 10.085938 z M 34.519531 11.388672 C 34.391312 11.368734 34.256297 11.374703 34.123047 11.408203 C 33.587047 11.542203 33.262484 12.084141 33.396484 12.619141 L 33.880859 14.560547 C 33.994859 15.015547 34.401609 15.318359 34.849609 15.318359 C 34.930609 15.318359 35.01275 15.308109 35.09375 15.287109 C 35.62975 15.153109 35.954313 14.611172 35.820312 14.076172 L 35.335938 12.136719 C 35.236187 11.733219 34.904187 11.448484 34.519531 11.388672 z M 29.300781 12.693359 C 29.172734 12.673469 29.039 12.679141 28.90625 12.712891 C 28.37025 12.846891 28.045687 13.388828 28.179688 13.923828 L 28.664062 15.863281 C 28.778063 16.318281 29.184812 16.621094 29.632812 16.621094 C 29.712812 16.621094 29.795953 16.611797 29.876953 16.591797 C 30.412953 16.457797 30.737516 15.915859 30.603516 15.380859 L 30.119141 13.439453 C 30.018641 13.035953 29.684922 12.753031 29.300781 12.693359 z M 24.087891 13.998047 C 23.959469 13.978063 23.823703 13.984328 23.689453 14.017578 C 23.153453 14.151578 22.828891 14.693516 22.962891 15.228516 L 23.447266 17.169922 C 23.561266 17.624922 23.968016 17.927734 24.416016 17.927734 C 24.496016 17.927734 24.578156 17.916484 24.660156 17.896484 C 25.196156 17.762484 25.522672 17.220547 25.388672 16.685547 L 24.902344 14.744141 C 24.801844 14.340641 24.473156 14.058 24.087891 13.998047 z M 42.025391 16.507812 C 41.798413 16.50491 41.567779 16.527446 41.335938 16.580078 L 23.335938 20.669922 C 21.974899 20.979181 21 22.20111 21 23.595703 L 21 26 L 21 29 L 21 43 L 20.171875 43 C 17.791052 43 15.568131 44.593782 15.097656 47.001953 C 14.481896 50.152039 16.922067 53 20 53 L 21 53 C 24.301625 53 27 50.301625 27 47 L 27 44 L 27 28.888672 L 39 26.162109 L 39 39 L 38.171875 39 C 35.791052 39 33.568131 40.593782 33.097656 43.001953 C 32.481896 46.152039 34.922067 49 38 49 L 39 49 C 42.301625 49 45 46.301625 45 43 L 45 40 L 45 24 L 45 22 L 45 19.505859 C 45 17.840823 43.614234 16.528131 42.025391 16.507812 z M 42.017578 18.501953 C 42.560955 18.500348 43 18.923897 43 19.505859 L 43 22 L 43 24 L 43 40 L 43 43 C 43 45.220375 41.220375 47 39 47 L 38 47 C 36.131933 47 34.674307 45.36068 35.060547 43.384766 C 35.332072 41.994936 36.682698 41 38.171875 41 L 39 41 C 40.093063 41 41 40.093063 41 39 L 41 24.908203 A 1.0001 1.0001 0 0 0 39.779297 23.933594 L 25.779297 27.115234 A 1.0001 1.0001 0 0 0 25 28.091797 L 25 44 L 25 47 C 25 49.220375 23.220375 51 21 51 L 20 51 C 18.131933 51 16.674307 49.36068 17.060547 47.384766 C 17.332072 45.994936 18.682698 45 20.171875 45 L 21 45 C 22.093063 45 23 44.093063 23 43 L 23 29 L 23 26 L 23 23.595703 C 23 23.124297 23.318335 22.725835 23.779297 22.621094 L 41.779297 18.529297 C 41.860205 18.510929 41.939953 18.502182 42.017578 18.501953 z"></path></svg> Media Player</div>
+      <div class="justplaying">
+        <div class="logoborder">
+          <div class="songlogo"></div>
+        </div>
+        <div class="songdetails"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          width="17" height="17"
+          viewBox="0 0 48 48"
+          style=" fill:#000000;"><linearGradient id="tS~Tu1dsT5kMXF2Lct~HUa_G9XXzb9XaEKX_gr1" x1="24.001" x2="24.001" y1="-4.765" y2="56.31" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4caf50"></stop><stop offset=".489" stop-color="#4aaf50"></stop><stop offset=".665" stop-color="#43ad50"></stop><stop offset=".79" stop-color="#38aa50"></stop><stop offset=".892" stop-color="#27a550"></stop><stop offset=".978" stop-color="#11a050"></stop><stop offset="1" stop-color="#0a9e50"></stop></linearGradient><path fill="url(#tS~Tu1dsT5kMXF2Lct~HUa_G9XXzb9XaEKX_gr1)" d="M24.001,4c-11.077,0-20,8.923-20,20s8.923,20,20,20c11.076,0,20-8.923,20-20	S35.077,4,24.001,4z"></path><path d="M21.224,15.938c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 c-0.145,1.023-0.877,1.755-1.899,1.755c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217 c-2.631,0-5.262,0.293-7.6,0.877c-0.293,0-0.585,0.146-1.023,0.146c-0.075,0.011-0.149,0.016-0.221,0.016 c-0.905,0-1.533-0.821-1.533-1.77c0-1.023,0.585-1.607,1.315-1.754C14.939,16.231,17.862,15.938,21.224,15.938 M20.785,22.369 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461c0,0.878-0.585,1.608-1.462,1.608 c-0.438,0-0.73-0.144-1.023-0.291c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733 c-0.439,0.144-0.585,0.144-0.877,0.144c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607 C15.523,22.808,17.716,22.369,20.785,22.369 M21.223,28.654c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314c-0.146,0.586-0.731,1.023-1.315,1.023c-0.292,0-0.585-0.145-0.877-0.292 c-2.777-1.607-6.139-2.484-9.792-2.484c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146 c-0.731,0-1.169-0.586-1.169-1.17c0-0.73,0.438-1.17,1.023-1.314C16.4,28.945,18.739,28.654,21.223,28.654 M21.224,14.938 c-3.789,0-6.666,0.371-9.317,1.202c-1.254,0.279-2.06,1.341-2.06,2.722c0,1.553,1.112,2.77,2.533,2.77 c0.095,0,0.192-0.005,0.291-0.017c0.319-0.007,0.574-0.065,0.764-0.107c0.068-0.015,0.13-0.035,0.193-0.038h0.123l0.116-0.03 c2.219-0.554,4.763-0.847,7.358-0.847c5.073,0,10.075,1.152,13.381,3.081l0.09,0.053l0.099,0.033 c0.109,0.036,0.195,0.073,0.273,0.105c0.251,0.105,0.563,0.236,1.065,0.236c1.483,0,2.671-1.075,2.889-2.615l0.01-0.07v-0.071 c0-1.171-0.564-2.13-1.549-2.635C33.238,16.313,27.314,14.938,21.224,14.938L21.224,14.938z M20.785,21.369 c-3.291,0-5.651,0.508-7.711,1.057l-0.058,0.015l-0.055,0.022c-1.194,0.476-1.799,1.329-1.799,2.536 c0,1.357,1.104,2.461,2.462,2.461c0.371,0,0.626-0.009,1.189-0.194c1.572-0.429,3.714-0.683,5.827-0.683 c4.441,0,8.562,1.037,11.603,2.921l0.038,0.024l0.04,0.02c0.334,0.168,0.792,0.397,1.471,0.397c1.404,0,2.462-1.121,2.462-2.608 c0-0.996-0.53-1.886-1.387-2.334C31.04,22.659,26.04,21.369,20.785,21.369L20.785,21.369z M21.223,27.654 c-2.547,0-4.969,0.297-7.404,0.907c-1.096,0.27-1.78,1.145-1.78,2.284c0,1.217,0.953,2.17,2.169,2.17 c0.172,0,0.334-0.037,0.522-0.079c0.101-0.023,0.288-0.065,0.357-0.067l0.101-0.003l0.122-0.023 c2.023-0.467,3.963-0.704,5.768-0.704c3.422,0,6.635,0.812,9.291,2.35l0.025,0.015l0.026,0.013 c0.334,0.168,0.792,0.399,1.327,0.399c1.05,0,2.032-0.766,2.285-1.781l0.03-0.119v-0.123c0-1.202-0.595-1.76-1.178-2.147 l-0.022-0.014l-0.022-0.013C29.455,28.713,25.437,27.654,21.223,27.654L21.223,27.654z" opacity=".05"></path><path d="M21.224,15.938c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 c-0.145,1.023-0.877,1.755-1.899,1.755c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217 c-2.631,0-5.262,0.293-7.6,0.877c-0.293,0-0.585,0.146-1.023,0.146c-0.075,0.011-0.149,0.016-0.221,0.016 c-0.905,0-1.533-0.821-1.533-1.77c0-1.023,0.585-1.607,1.315-1.754C14.939,16.231,17.862,15.938,21.224,15.938 M20.785,22.369 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461c0,0.878-0.585,1.608-1.462,1.608 c-0.438,0-0.73-0.144-1.023-0.291c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733 c-0.439,0.144-0.585,0.144-0.877,0.144c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607 C15.523,22.808,17.716,22.369,20.785,22.369 M21.223,28.654c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314c-0.146,0.586-0.731,1.023-1.315,1.023c-0.292,0-0.585-0.145-0.877-0.292 c-2.777-1.607-6.139-2.484-9.792-2.484c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146 c-0.731,0-1.169-0.586-1.169-1.17c0-0.73,0.438-1.17,1.023-1.314C16.4,28.945,18.739,28.654,21.223,28.654 M21.224,15.438 c-3.747,0-6.582,0.366-9.188,1.186c-1.042,0.222-1.689,1.078-1.689,2.238c0,1.273,0.893,2.27,2.033,2.27 c0.084,0,0.169-0.005,0.257-0.016c0.28-0.004,0.506-0.055,0.689-0.096c0.119-0.027,0.222-0.05,0.299-0.05h0.061l0.06-0.015 c2.258-0.564,4.844-0.862,7.479-0.862c5.158,0,10.254,1.177,13.633,3.149l0.045,0.026l0.05,0.016 c0.123,0.041,0.221,0.082,0.309,0.119c0.231,0.097,0.47,0.197,0.871,0.197c1.247,0,2.209-0.878,2.394-2.185l0.005-0.035v-0.035 c0-0.985-0.473-1.787-1.298-2.201C33.083,16.794,27.24,15.438,21.224,15.438L21.224,15.438z M20.785,21.869 c-3.054,0-5.24,0.416-7.583,1.04l-0.029,0.008l-0.028,0.011c-0.637,0.254-1.484,0.745-1.484,2.071c0,0.943,0.75,1.961,1.962,1.961 c0.34,0,0.541-0.008,1.033-0.169c1.637-0.447,3.827-0.708,5.983-0.708c4.533,0,8.747,1.064,11.867,2.996 c0.345,0.175,0.725,0.366,1.286,0.366c1.119,0,1.962-0.906,1.962-2.108c0-0.823-0.442-1.554-1.154-1.909 C30.885,23.141,25.965,21.869,20.785,21.869L20.785,21.869z M21.223,28.154c-2.506,0-4.888,0.292-7.283,0.892 c-0.864,0.213-1.401,0.902-1.401,1.799c0,0.821,0.624,1.67,1.669,1.67c0.116,0,0.246-0.029,0.411-0.067 c0.148-0.033,0.351-0.079,0.466-0.079h0.057l0.056-0.013c2.06-0.476,4.038-0.717,5.88-0.717c3.51,0,6.809,0.836,9.542,2.417 c0.331,0.168,0.712,0.359,1.127,0.359c0.827,0,1.601-0.603,1.8-1.402l0.015-0.06v-0.061c0-1.012-0.493-1.424-0.954-1.73 C29.277,29.189,25.348,28.154,21.223,28.154L21.223,28.154z" opacity=".07"></path><path fill="#fff" d="M31.747,33.915c-0.292,0-0.585-0.145-0.877-0.292c-2.777-1.607-6.139-2.484-9.792-2.484 c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146c-0.731,0-1.169-0.586-1.169-1.17 c0-0.73,0.438-1.17,1.023-1.314c2.338-0.586,4.677-0.877,7.161-0.877c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314C32.916,33.478,32.331,33.915,31.747,33.915z M33.793,28.945c-0.438,0-0.73-0.144-1.023-0.291 c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733c-0.439,0.144-0.585,0.144-0.877,0.144 c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607c2.192-0.584,4.385-1.023,7.454-1.023 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461C35.255,28.215,34.67,28.945,33.793,28.945z M36.132,23.101 c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217c-2.631,0-5.262,0.293-7.6,0.877 c-0.293,0-0.585,0.146-1.023,0.146c-1.023,0.146-1.754-0.73-1.754-1.754c0-1.023,0.585-1.607,1.315-1.754 c2.777-0.877,5.7-1.17,9.062-1.17c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 C37.886,22.369,37.154,23.101,36.132,23.101z"></path></svg>
+          <div class="mname">
+            <h4>You're Mine</h4>
+            <h5>Phantogram</h5>
+          </div>
+        </div>
+        <div class="songcontrols">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Play Skip Back</title><path d="M400 111v290c0 17.44-17 28.52-31 20.16L121.09 272.79c-12.12-7.25-12.12-26.33 0-33.58L369 90.84c14-8.36 31 2.72 31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M112 80v352"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon5" viewBox="0 0 512 512"><title>Play</title><path d="M112 111v290c0 17.44 17 28.52 31 20.16l247.9-148.37c12.12-7.25 12.12-26.33 0-33.58L143 90.84c-14-8.36-31 2.72-31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Play Skip Forward</title><path d="M112 111v290c0 17.44 17 28.52 31 20.16l247.9-148.37c12.12-7.25 12.12-26.33 0-33.58L143 90.84c-14-8.36-31 2.72-31 20.16z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M400 80v352"/></svg>
+        </div>
+      </div>
+      <div class="servicesrunning"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 64 64" style=" fill:#000000;"><path d="M 13 6 C 9.1482075 6 6 9.1482075 6 13 L 6 51 C 6 54.851793 9.1482075 58 13 58 L 51 58 C 54.851793 58 58 54.851793 58 51 L 58 13 C 58 9.1482075 54.851793 6 51 6 L 13 6 z M 13 8 L 51 8 C 53.768207 8 56 10.231793 56 13 L 56 51 C 56 53.768207 53.768207 56 51 56 L 13 56 C 10.231793 56 8 53.768207 8 51 L 8 13 C 8 10.231793 10.231793 8 13 8 z M 39.738281 10.085938 C 39.609953 10.065953 39.475547 10.070266 39.341797 10.103516 C 38.805797 10.237516 38.479281 10.781406 38.613281 11.316406 L 39.099609 13.255859 C 39.213609 13.710859 39.620359 14.013672 40.068359 14.013672 C 40.148359 14.013672 40.2305 14.004375 40.3125 13.984375 C 40.8485 13.850375 41.173063 13.306484 41.039062 12.771484 L 40.554688 10.832031 C 40.454188 10.428531 40.123266 10.145891 39.738281 10.085938 z M 34.519531 11.388672 C 34.391312 11.368734 34.256297 11.374703 34.123047 11.408203 C 33.587047 11.542203 33.262484 12.084141 33.396484 12.619141 L 33.880859 14.560547 C 33.994859 15.015547 34.401609 15.318359 34.849609 15.318359 C 34.930609 15.318359 35.01275 15.308109 35.09375 15.287109 C 35.62975 15.153109 35.954313 14.611172 35.820312 14.076172 L 35.335938 12.136719 C 35.236187 11.733219 34.904187 11.448484 34.519531 11.388672 z M 29.300781 12.693359 C 29.172734 12.673469 29.039 12.679141 28.90625 12.712891 C 28.37025 12.846891 28.045687 13.388828 28.179688 13.923828 L 28.664062 15.863281 C 28.778063 16.318281 29.184812 16.621094 29.632812 16.621094 C 29.712812 16.621094 29.795953 16.611797 29.876953 16.591797 C 30.412953 16.457797 30.737516 15.915859 30.603516 15.380859 L 30.119141 13.439453 C 30.018641 13.035953 29.684922 12.753031 29.300781 12.693359 z M 24.087891 13.998047 C 23.959469 13.978063 23.823703 13.984328 23.689453 14.017578 C 23.153453 14.151578 22.828891 14.693516 22.962891 15.228516 L 23.447266 17.169922 C 23.561266 17.624922 23.968016 17.927734 24.416016 17.927734 C 24.496016 17.927734 24.578156 17.916484 24.660156 17.896484 C 25.196156 17.762484 25.522672 17.220547 25.388672 16.685547 L 24.902344 14.744141 C 24.801844 14.340641 24.473156 14.058 24.087891 13.998047 z M 42.025391 16.507812 C 41.798413 16.50491 41.567779 16.527446 41.335938 16.580078 L 23.335938 20.669922 C 21.974899 20.979181 21 22.20111 21 23.595703 L 21 26 L 21 29 L 21 43 L 20.171875 43 C 17.791052 43 15.568131 44.593782 15.097656 47.001953 C 14.481896 50.152039 16.922067 53 20 53 L 21 53 C 24.301625 53 27 50.301625 27 47 L 27 44 L 27 28.888672 L 39 26.162109 L 39 39 L 38.171875 39 C 35.791052 39 33.568131 40.593782 33.097656 43.001953 C 32.481896 46.152039 34.922067 49 38 49 L 39 49 C 42.301625 49 45 46.301625 45 43 L 45 40 L 45 24 L 45 22 L 45 19.505859 C 45 17.840823 43.614234 16.528131 42.025391 16.507812 z M 42.017578 18.501953 C 42.560955 18.500348 43 18.923897 43 19.505859 L 43 22 L 43 24 L 43 40 L 43 43 C 43 45.220375 41.220375 47 39 47 L 38 47 C 36.131933 47 34.674307 45.36068 35.060547 43.384766 C 35.332072 41.994936 36.682698 41 38.171875 41 L 39 41 C 40.093063 41 41 40.093063 41 39 L 41 24.908203 A 1.0001 1.0001 0 0 0 39.779297 23.933594 L 25.779297 27.115234 A 1.0001 1.0001 0 0 0 25 28.091797 L 25 44 L 25 47 C 25 49.220375 23.220375 51 21 51 L 20 51 C 18.131933 51 16.674307 49.36068 17.060547 47.384766 C 17.332072 45.994936 18.682698 45 20.171875 45 L 21 45 C 22.093063 45 23 44.093063 23 43 L 23 29 L 23 26 L 23 23.595703 C 23 23.124297 23.318335 22.725835 23.779297 22.621094 L 41.779297 18.529297 C 41.860205 18.510929 41.939953 18.502182 42.017578 18.501953 z"></path></svg> Background services & programs</div>
+    <div class="backsoft">
+      <div class="lobacksoft"><img src="https://img.icons8.com/color/35/null/adobe-after-effects--v1.png"/></div>
+      <div class="lobacksoft"><img src="https://img.icons8.com/color/35/null/adobe-premiere-pro--v1.png"/></div>
+      <div class="lobacksoft"><img src="https://img.icons8.com/color/35/null/bluetooth-2.png"/></div>
+      <div class="lobacksoft"><img src="https://img.icons8.com/fluency/35/null/filmora.png"/></div>
+    </div>
+    </div>
+
+    <div id="wrapper">
+
+      <div class="container-calendar">
+          <h3 id="monthAndYear"></h3>
+          
+          <div class="button-container-calendar">
+              <button id="previous" onclick="previous()">&#8249;</button>
+              <button id="next" onclick="next()">&#8250;</button>
+          </div>
+          
+          <table class="table-calendar" id="calendar" data-lang="en">
+              <thead id="thead-month"></thead>
+              <tbody id="calendar-body"></tbody>
+          </table>
+          
+          <div class="footer-container-calendar">
+               <label for="month">Jump To: </label>
+               <select id="month" onchange="jump()">
+                   <option value=0>Jan</option>
+                   <option value=1>Feb</option>
+                   <option value=2>Mar</option>
+                   <option value=3>Apr</option>
+                   <option value=4>May</option>
+                   <option value=5>Jun</option>
+                   <option value=6>Jul</option>
+                   <option value=7>Aug</option>
+                   <option value=8>Sep</option>
+                   <option value=9>Oct</option>
+                   <option value=10>Nov</option>
+                   <option value=11>Dec</option>
+               </select>
+               <select id="year" onchange="jump()"></select>       
+          </div>
+  
+      </div>
+      
+  </div>
+
+      <div id="microsoftstore">
+        <div class="actionbar" style="background-color: whitesmoke !important; ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+          <svg onclick="storetoggle()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <!--  -->
+        <div class="storesidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Home</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Game Controller</title><path d="M467.51 248.83c-18.4-83.18-45.69-136.24-89.43-149.17A91.5 91.5 0 00352 96c-26.89 0-48.11 16-96 16s-69.15-16-96-16a99.09 99.09 0 00-27.2 3.66C89 112.59 61.94 165.7 43.33 248.83c-19 84.91-15.56 152 21.58 164.88 26 9 49.25-9.61 71.27-37 25-31.2 55.79-40.8 119.82-40.8s93.62 9.6 118.66 40.8c22 27.41 46.11 45.79 71.42 37.16 41.02-14.01 40.44-79.13 21.43-165.04z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><circle cx="292" cy="224" r="20"/><path d="M336 288a20 20 0 1120-19.95A20 20 0 01336 288z"/><circle cx="336" cy="180" r="20"/><circle cx="380" cy="224" r="20"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M160 176v96M208 224h-96"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Musical Notes</title><path d="M192 218v-6c0-14.84 10-27 24.24-30.59l174.59-46.68A20 20 0 01416 154v22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M416 295.94v80c0 13.91-8.93 25.59-22 30l-22 8c-25.9 8.72-52-10.42-52-38h0a33.37 33.37 0 0123-32l51-18.15c13.07-4.4 22-15.94 22-29.85V58a10 10 0 00-12.6-9.61L204 102a16.48 16.48 0 00-12 16v226c0 13.91-8.93 25.6-22 30l-52 18c-13.88 4.68-22 17.22-22 32h0c0 27.58 26.52 46.55 52 38l22-8c13.07-4.4 22-16.08 22-30v-80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon4" viewBox="0 0 512 512"><title>Cart</title><circle cx="176" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="400" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 80h64l48 272h256"/><path d="M160 288h249.44a8 8 0 007.85-6.43l28.8-144a8 8 0 00-7.85-9.57H128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+        </div>
+        <div class="storecontent">
+          <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide slide1">
+                    <div>
+                      <h3>Soundtrack for your day - music & more</h3> 
+                      <h5>Choose from top music apps</h5>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide2">
+                    <div>
+                      <h3>App designed for pros</h3> 
+                      <h5>Try industry leading editing & design tools</h5>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide3">
+                    <div>
+                      <h3>Apps for study time & downtime</h3> 
+                      <h5>Learn & play, wherever your are!</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="appsection">Best Entirtement Apps</h4>
+              <div id="entertenmentapps">
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/color/96/null/amazon-prime-video.png"/>
+               <h4>Amazon Prime for Windows</h4> 
+               <h5 class="categroy">Entertainment</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+               1K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/color/96/null/tiktok--v1.png"/>
+               <h4>TikTok for Windows</h4> 
+               <h5 class="categroy">Entertainment</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+               2K
+              </span>
+              <h5 class="status">Free</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/fluency/96/null/netflix-desktop-app.png"/>
+               <h4>Netflix</h4> 
+               <h5 class="categroy">Entertainment</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                2K
+              </span>
+              <h5 class="status">Free</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/ultraviolet/96/null/disney-plus.png"/>
+               <h4>Disney</h4> 
+               <h5 class="categroy">Entertainment</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                4K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+              </div>
+
+              <!--  -->
+
+              <h4 class="appsection">Productivity Apps</h4>
+              <div id="proapps">
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/color/96/null/adobe-acrobat--v1.png"/>
+               <h4>Adobe Acrobat Reader</h4> 
+               <h5 class="categroy">Productivity</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+               10K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/color-glass/96/null/microsoft-teams.png"/>
+               <h4>Microsoft Teams</h4> 
+               <h5 class="categroy">Productivity</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+               2K
+              </span>
+              <h5 class="status">Free</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/fluency/96/null/zoom.png"/>
+               <h4>Zoom</h4> 
+               <h5 class="categroy">Productivity</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                2K
+              </span>
+              <h5 class="status">Free</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/fluency/96/null/winrar.png"/>
+               <h4>Winrar</h4> 
+               <h5 class="categroy">Productivity</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                4K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="https://img.icons8.com/color/96/null/adobe-photoshop--v1.png"/>
+               <h4>Adobe Photoshop</h4> 
+               <h5 class="categroy">Productivity</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                50K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+              </div>
+
+              <!--  -->
+              <h4 class="appsection">Gaming Apps</h4>
+              <div id="gameapps">
+                <div class="storeapps">
+                  <img src="./images/Resident_Evil_Village.png" width="96px" height="96px"/> 
+               <h4> Resident Evil Village</h4> 
+               <h5 class="categroy">Gaming</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+               1.3M
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="./images/CYBERPUNK-2077.png" width="96px"/>
+               <h4>Cyberpunk 2077</h4> 
+               <h5 class="categroy">Gaming</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+               20M
+              </span>
+              <h5 class="status">Free</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="./images/GTA-V.png" width="96px"/>
+               <h4>GTA V</h4> 
+               <h5 class="categroy">Gaming</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                170M
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="./images/Call of Duty.png" width="96px"/>
+               <h4>Call of Duty Modern Warfare 2</h4> 
+               <h5 class="categroy">Gaming</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star Half</title><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>
+                8M
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+                <div class="storeapps">
+                  <img src="./images/ranch simulator.png" width="96px"/>
+               <h4>Ranch Simulator</h4> 
+               <h5 class="categroy">Gaming</h5>
+               <span class="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Star</title><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+                50K
+              </span>
+              <h5 class="status">Owned</h5>
+                </div>
+              </div>
+        </div>
+        
+
+    <!--  -->
+    </div>
+    </div>
+    <div id="phone">
+      <p>
+        Windows 12 is unable to open in phone. Even Microsoft Can't make it
+        responsive for phone so how can I make it responsive.
+      </p>
+      <br />
+      <button id="anyway" onclick="phonedesktoptoggle()">Open Anyway</button>
+    </div>
+  </body>
+  <script src="./js/script2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+   delay: 5000,
+ },
+  });
+  </script>
+</html>
